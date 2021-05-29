@@ -1,0 +1,32 @@
+@mixin card-set($num) {
+  flex-basis: calc(100% / #{$num} - #{$card-magrin});
+  margin-left: $card-magrin;
+  margin-top: $card-magrin;
+}
+
+//breakpoints
+@mixin for-phone-only {
+  @media (max-width: $phone-sz) {
+    @content;
+  }
+}
+@mixin for-phone-to-tablet {
+  @media (max-width: $tablet-sz - 1) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (min-width: $tablet-sz) {
+    @content;
+  }
+}
+@mixin for-phone-to-desktop {
+  @media (max-width: $desktop-sz - 1) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: $desktop-sz) {
+    @content;
+  }
+}

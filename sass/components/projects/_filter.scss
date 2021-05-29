@@ -1,0 +1,33 @@
+.filter {
+  @extend %list-none;
+
+  margin-bottom: 40px;
+  @include for-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  @include for-desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.filter__btn {
+  font-weight: 500;
+  line-height: 1.6;
+
+  padding: 6px 22px;
+}
